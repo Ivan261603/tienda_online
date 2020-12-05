@@ -1,0 +1,22 @@
+doctype html
+head
+  title Productos en stok
+  link(rel="stylesheet", href="/css/estilo.css")
+  link(rel="stylesheet", href="/css/carrito.css")
+  
+
+html
+  body
+    include menu.pug
+    h1 Lista de Productos
+    h3=usuario[0].nombre
+    main
+      for row in comp
+        div(class='articulo')
+            div(class='imagen')
+              img(src="/img/"+row.imagen)
+            div(class='titulo')=row.nombre_prod
+            div(class='precio')=row.precio_prod
+              p='stock:' + row.stock
+            a(href="/compra/registrar_compra/"+row.id_producto,class='button') Agregar al carrito    
+      

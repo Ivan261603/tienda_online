@@ -1,0 +1,21 @@
+doctype html
+head
+  title Registro de Usuario
+  link(rel='stylesheet', href='/css/formulario.css')
+html
+  body
+    include menu.pug
+    h1 Registro de Productos
+    div(class='contenedor')
+      form(action='/producto/registrar_productos',method='post')
+        label <b> id_producto </b>
+        input(name='id_producto',type='number')
+        label <b> codigo_prod </b>
+        input(name='codigo_prod',type='text')
+        label <b> nombre_prod </b>
+        input(name='nombre_prod',type='text')
+        label <b> precio_prod </b>
+        input(name='precio_prod',type='number')
+        label <b> stock </b>
+        input(name='stock',type='number')
+        input(value='Registrar',type='submit',class='registrar')

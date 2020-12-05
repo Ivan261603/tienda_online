@@ -1,0 +1,27 @@
+doctype html
+head
+  title Compras en el Carrito
+  link(rel="stylesheet", href="/css/estilo.css")
+  link(rel="stylesheet", href="/css/carrito.css")
+html
+  body
+    include menu.pug
+    h1 Compras Realizadas
+    table
+      caption compras
+      th Documento Cliente
+      th Nombre Producto
+      th Cantidad Compra
+      th Precio Producto
+      th Fecha compra
+      th Admin
+      for val in lista
+        tr
+          td=val.cedula
+          td=val.nombre_prod
+          td=val.cantidad_comp
+          td=val.precio_prod
+          td=val.fecha_comp
+          td
+            a(href="../carrito_comp/eliminar/"+val.id_producto)
+            img(src="/img/eliminar.jpeg",title='eliminar producto')

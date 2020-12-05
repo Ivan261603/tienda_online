@@ -1,0 +1,30 @@
+doctype html
+head
+  title lista base
+  link(rel="stylesheet", href="/css/estilo.css")
+
+html
+  include menu.pug
+  a(href="/producto/registrar",class='boton_registrar')
+    img(src="../img/nuevo.jpeg",title='nuevo producto')
+  table
+    caption lista de productos
+    th id_producto
+    th codigo_prod
+    th nombre_prod
+    th precio_prod
+    th stock
+    th imagen
+    th admin
+    for val in produ
+      tr
+        td=val.id_producto
+        td=val.codigo_prod
+        td=val.nombre_prod
+        td=val.precio_prod
+        td=val.stock
+        td
+          a(href="../producto/eliminar/"+val.id_producto)
+            img(src="/img/eliminar.jpeg",title='eliminar producto')
+          a(href="../producto/actualizar/"+val.id_producto)
+            img(src="/img/actualizar.jpeg",width=30, title='actulizar') 

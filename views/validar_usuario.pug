@@ -1,0 +1,16 @@
+doctype html
+head
+  title Validar
+  link(rel="stylesheet", href="/css/formulario.css")
+html
+  body
+    h1 Inicio
+    div(class='contenedor')
+      form(action="/cliente/validar_usuario", method='post')
+        label <b>Login</b> <br>
+        input(name='login',type="text")
+        <br>
+        label <b>Password</b><br>
+        input(name='password',type="password")
+        <br>
+        input(type="submit", value='Validar', class='registrar')

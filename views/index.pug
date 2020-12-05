@@ -1,0 +1,31 @@
+doctype html
+head
+  title lista base
+  link(rel="stylesheet", href="/css/estilo.css")
+
+html
+  include menu.pug
+  a(href="/cliente/registrar",class='boton_registrar')
+    img(src="../img/nuevo.jpeg",title='nuevo cliente')
+  table
+    caption lista de clientes
+    th cedula
+    th nombres
+    th direccion
+    th telefono
+    th admin
+    for val in index
+      tr
+        td=val.cedula
+        td=val.nombre
+        td=val.direccion
+        td=val.telefono
+        td
+          a(href="../cliente/eliminar/"+val.cedula)
+            img(src="/img/eliminar.jpeg",title='eliminar cliente')
+          a(href="../cliente/buscar/"+val.cedula)
+            img(src="/img/actualizar.png",width=30, title='actualizar')  
+
+            
+
+

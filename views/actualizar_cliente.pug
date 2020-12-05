@@ -1,0 +1,20 @@
+doctype html
+head
+  title actualizando datos
+  link(rel="stylesheet", href="/css/formulario.css")
+html
+  body
+    include menu.pug
+    h1 Actulizando datos de los clientes
+    div(class="contenedor")
+      form(action="/cliente/actualizar_cliente",method='post')
+        label <b> Cedula </b>
+        input(name='cedula', type="number",value=rows_cliente[0].cedula)
+        label <b>Nombre </b>
+        input( name='nombre',type="text",value=rows_cliente[0].nombre)
+        label <b>Direccion </b>
+        input( name='direccion',type="text",value=rows_cliente[0].direccion)
+        label <b>Telefono </b>
+        input( name='telefono',type="number",value=rows_cliente[0].telefono)
+        input(value='actualizar', type="submit",class='registrar')
+          

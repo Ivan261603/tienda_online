@@ -1,0 +1,21 @@
+doctype html
+head
+	title Actulizar Prod
+	link(rel="stylesheet", href="/css/formulario.css")
+html
+	body
+		include menu.pug
+		h1 Actuallizando datos 
+		div(class="contenedor")
+				form(action="/producto/actualizar_producto",method="post")
+					label <b> Id_Producto </b>
+					input( name='id_producto', type="number",value=producto[0].id_producto)
+					label <b>Codigo_prod </b>
+					input( name='codigo_prod',type="text",value=producto[0].codigo_prod)
+					label <b>Nombre_prod </b>
+					input( name='nombre_prod',type="text",value=producto[0].nombre_prod)
+					label <b>Precio_prod </b>
+					input( name='precio_prod',type="float",value=producto[0].precio_prod)
+					label <b>Stock </b>
+					input( name='stock',type="number",value=producto[0].stock)
+					input(value='actualizar', type="submit",class='registrar')

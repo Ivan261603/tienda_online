@@ -1,0 +1,20 @@
+doctype html
+head
+  title Registro de Usuario
+  link(rel='stylesheet', href='/css/formulario.css')
+html
+  body
+    include menu.pug
+    h1 Registro de Clientes
+    div(class='contenedor')
+      form(action='/cliente/registrar_cliente',method='post')
+        label <b> Cedula </b>
+        input(name='cedula',type='number')
+        label <b> Nombre </b>
+        input(name='nombre',type='text')
+        label <b> Dirección </b>
+        input(name='direccion',type='text')
+        label <b> Telefono </b>
+        input(name='telefono',type='number')
+        input(value='Registrar',type='submit',class='registrar')
+   

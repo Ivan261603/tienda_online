@@ -9,6 +9,7 @@ html
     h1 Compras Realizadas
     table
       caption compras
+      th Id_compra
       th Documento Cliente
       th Nombre Producto
       th Cantidad Compra
@@ -17,11 +18,13 @@ html
       th Admin
       for val in lista
         tr
+          td=val.id_compra
           td=val.cedula
           td=val.nombre_prod
           td=val.cantidad_comp
           td=val.precio_prod
           td=val.fecha_comp
+          
           td
-            a(href="../carrito_comp/eliminar/"+val.id_producto)
-            img(src="/img/eliminar.jpeg",title='eliminar producto')
+            a(href="../carrito_comp/eliminar/"+val.id_compra)
+              img(src="/img/eliminar.jpg" ,title='eliminar compra',width=40)

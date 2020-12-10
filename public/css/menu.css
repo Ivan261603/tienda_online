@@ -14,10 +14,21 @@ div{
     padding: top 20px;
   
 }
+.cerrar{
+    width: 50%;
+    height: 20%;
+    position: absolute;
+    float: right;
+    margin-left: 90%;
+    margin-top: -45px;
+   
+}
+
 .img-menu{
     position: relative;
-    margin-left:80em;
-    float: left;
+    margin-left:70em;
+    margin-right: 0.5em;
+/*     float: left; */
   
   
 }

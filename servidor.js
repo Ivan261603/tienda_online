@@ -7,6 +7,8 @@ const ruta_productos=require('./routers/productos');
 const ruta_compras=require('./routers/compras');
 const ruta_index=require('./routers/index');
 const ruta_carrito=require('./routers/carrito_comp');
+const ruta_stadic=require('./routers/stadic');
+const ruta_nuevo_cliente=require('./routers/nuevo_cliente');
 
 
 var Servidor = express();
@@ -34,7 +36,8 @@ Servidor.use('/producto', ruta_productos);
 Servidor.use('/compra', ruta_compras);
 Servidor.use('/',ruta_index);
 Servidor.use('/carrito_comp',ruta_carrito);
-
+Servidor.use('/stadic',ruta_stadic);
+Servidor.use('/nuevo_cliente',ruta_nuevo_cliente);
 
 
 Servidor.listen(3000,()=>{

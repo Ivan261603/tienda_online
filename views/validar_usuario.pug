@@ -4,7 +4,7 @@ head
   link(rel="stylesheet", href="/css/formulario.css")
 html
   body
-    h1 Inicio
+    h1 Iniciar Sección
     div(class='contenedor')
       form(action="/cliente/validar_usuario", method='post')
         label <b>Login</b> <br>
@@ -12,5 +12,11 @@ html
         <br>
         label <b>Password</b><br>
         input(name='password',type="password")
+       
+       
         <br>
         input(type="submit", value='Validar', class='registrar')
+        label <b>Registrarse Por primera vez</b><br>
+        div(class='boton-iniciar')
+          a(href="/nuevo_cliente/nuevo_cliente",class='boton_registrar')
+            img(src="../img/nuevo.png",width=50, title='nuevo cliente')

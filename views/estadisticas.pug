@@ -1,0 +1,30 @@
+doctype html
+head
+  title estadisticas
+  link(rel="stylesheet", href="/css/estilo.css")
+  link(rel="stylesheet", href="/css/carrito.css")
+  
+html
+  body
+    include menu.pug
+    h1 Rango de Compras Realizadas
+    table
+      caption stadic
+      th Nombre Cliente
+      th Documento
+      th Precio_prod
+      th Nombre_prod
+      th Total Compras_realizadas
+
+      for val in listado
+        tr
+          td=val.nombre
+          td=val.cedula
+          td=val.precio_prod
+          td=val.nombre_prod
+          td=val.total_compras
+    div(class='btn-compra') 
+      <h4> Listar los clientes que no realizaron compras <br>
+        a(href="/stadic/mostrar")
+          img(src="/img/listar_comp.png",width=40, title='actualizar') 
+                

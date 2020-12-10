@@ -1,0 +1,25 @@
+doctype html
+head
+  title estadisticas
+  link(rel="stylesheet", href="/css/estilo.css")
+  link(rel="stylesheet", href="/css/carrito.css")
+  
+html
+  body
+    h1 Clientes Sin Compras Realizadas
+    table
+      caption stadic
+      th Documento
+      th Nombre Cliente
+      th Dirección
+      th Telefono
+      for val in listad
+        tr
+          td=val.cedula
+          td=val.nombre
+          td=val.direccion
+          td=val.telefono
+          td
+    div(class='atras')       
+      a(href="/stadic/atras")
+        img(src="/img/volver.png",width=90,title='Regresar', alt="volver")

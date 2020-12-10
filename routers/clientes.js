@@ -24,8 +24,11 @@ ruta_cliente.post('/registrar_cliente',(peticion,respuesta)=>{
     var nombre=peticion.body.nombre;
     var direccion=peticion.body.direccion;
     var telefono=peticion.body.telefono;
-     var sql=`insert into cliente (cedula,nombre,direccion,telefono)
-        values(${cedula},'${nombre}','${direccion}','${telefono}')`;
+    var login=peticion.body.login;
+    var password=peticion.body.password;
+    var rol=peticion.body.rol;
+     var sql=`insert into cliente (cedula,nombre,direccion,telefono,login,password,rol)
+        values(${cedula},'${nombre}','${direccion}','${telefono}','${login}',${password},'${rol}')`;
 
      conexion.query(sql,(error,rows,fields)=>{
          if(!error){
@@ -37,8 +40,8 @@ ruta_cliente.post('/registrar_cliente',(peticion,respuesta)=>{
      });   
 });
 
-ruta_cliente.get('/eliminar/:id',(peticion,respuesta)=>{
-    var ced=peticion.params.id;
+ruta_cliente.get('/eliminar/:ced',(peticion,respuesta)=>{
+    var ced=peticion.params.ced;
     var sql=`delete from cliente where cedula=${ced};`
     conexion.query(sql,(error,rows,fields)=>{
         if(!error){

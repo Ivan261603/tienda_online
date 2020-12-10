@@ -6,7 +6,7 @@ head
 html
   include menu.pug
   a(href="/cliente/registrar",class='boton_registrar')
-    img(src="../img/nuevo.jpeg",title='nuevo cliente')
+    img(src="../img/nuevo.png",width=50, title='nuevo cliente')
   table
     caption lista de clientes
     th cedula
@@ -22,9 +22,9 @@ html
         td=val.telefono
         td
           a(href="../cliente/eliminar/"+val.cedula)
-            img(src="/img/eliminar.jpeg",title='eliminar cliente')
+            img(src="/img/eliminar_clie.png" ,width=40,title='eliminar cliente')
           a(href="../cliente/buscar/"+val.cedula)
-            img(src="/img/actualizar.png",width=30, title='actualizar')  
+            img(src="/img/actualizar.png",width=40, title='actualizar')  
 
             
 

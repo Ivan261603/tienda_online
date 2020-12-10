@@ -50,8 +50,8 @@ ruta_producto.get('/eliminar/:id',(peticion,respuesta)=>{
     });
 });
 
-ruta_producto.get('/buscar/:fk_prod',(peticion,respuesta)=>{
-    var id_pro=peticion.params.fk_prod;
+ruta_producto.get('/buscar/:id_prod',(peticion,respuesta)=>{
+    var id_pro=peticion.params.id_prod;
     var sql="select * from producto where id_producto="+id_pro;
     conexion.query(sql,(error,rows,fields)=>{
         if(!error){
@@ -71,7 +71,7 @@ ruta_producto.post('/actualizar_producto',(peticion,respuesta)=>{
     var stock=peticion.body.stock;
     var sql=`update producto set codigo_prod=${cod_p},
      nombre_prod='${nom_prod}',
-    precio_prod=${pre_prod},stock=${stock} where id_producto=${id_prodn}`;
+    precio_prod=${pre_prod},stock=${stock} where id_producto=${id_prod}`;
 
     conexion.query(sql,(error,rows,fields)=>{
         if(!error){
